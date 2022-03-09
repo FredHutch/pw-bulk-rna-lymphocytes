@@ -1,4 +1,4 @@
-# Bulk RNA Lymphocyte Analysis (PubWeb)
+# Bulk RNAseq Lymphocyte Analysis (PubWeb)
 Quantification of lymphocyte cell types from bulk RNA sequencing data
 
 ## Purpose
