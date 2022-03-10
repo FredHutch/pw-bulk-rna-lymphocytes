@@ -3,7 +3,7 @@ nextflow.enable.dsl=2
 
 def print_help(){
     log.info"""
-    Required parameter: outdir
+    Required parameter: output_folder
     Use this parameter to indicate the directory where all outputs will be published
     """
 
@@ -13,7 +13,7 @@ def print_help(){
 process quantiseq {
 
     container "${params.container__quantiseq}"
-    publishDir "${params.outdir}", mode: "copy", overwrite: true
+    publishDir "${params.output_folder}", mode: "copy", overwrite: true
 
     input:
         path "input.tsv"
@@ -34,7 +34,7 @@ workflow predict {
     main:
 
     // If the user did not provide a path for the output
-    if ( params.outdir == false ){
+    if ( params.output_folder == false ){
         print_help()
     }
 
